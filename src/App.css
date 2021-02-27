@@ -1,0 +1,320 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgb(95, 95, 95), black);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+}
+
+.col1,
+.col3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  min-width: 540px;
+  height: 96vh;
+}
+
+.col2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4%;
+}
+
+button {
+  width: 65px;
+  height: 65px;
+  background: radial-gradient(
+    circle,
+    rgb(85, 85, 85) 50%,
+    rgb(50, 50, 50) 100%
+  );
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 0.5rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-size: medium;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.3s, text-shadow 0.05s, border 0.3s;
+}
+
+.movie-button:hover {
+  border: 1px solid white;
+  box-shadow: 0 4px 0.5rem 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px white, 0 0 12px blue, 0 0 8px lightblue;
+}
+
+.game-button:hover {
+  border: 1px solid white;
+  box-shadow: 0 4px 0.5rem 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px white, 0 0 12px darkgreen, 0 0 8px lightgreen;
+}
+
+.top-header,
+.preview-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92.5%;
+}
+
+.player {
+  background-color: rgb(85, 85, 85);
+  width: 100%;
+  height: 84vh;
+  max-height: 36rem;
+  min-height: 450px;
+  border: 1px solid rgba(85, 85, 85);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.player-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgb(85, 85, 85) 50%,
+    rgb(50, 50, 50) 100%
+  );
+  width: 100%;
+  height: 84vh;
+  max-height: 36rem;
+  min-height: 450px;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.player-details {
+  padding: 1rem;
+  background: radial-gradient(
+    circle,
+    rgb(85, 85, 85) 50%,
+    rgb(50, 50, 50) 100%
+  );
+  border-top: 1px solid rgba(85, 85, 85, 0.5);
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-release-date {
+  display: flex;
+  justify-content: center;
+}
+
+.game-release-date,
+.game-release-date p {
+  margin: 2px 0;
+  color: black;
+  text-shadow: 0 0 4px lightgreen;
+  font-size: small;
+}
+
+.movie-description {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  height: 8rem;
+  line-height: 1.6;
+  margin: 1.5rem 1rem;
+  padding-right: 0.5rem;
+  overflow: auto;
+}
+
+.movie-description::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.movie-description::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.movie-description::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 255, 0.5);
+  outline: 1px solid rgb(85, 85, 85);
+  border-radius: 2px;
+}
+
+.game-description {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  height: 8rem;
+  line-height: 1.6;
+  margin: 0.5rem 1rem;
+  padding-right: 0.5rem;
+  overflow: auto;
+}
+
+.game-description::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.game-description::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.game-description::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 238, 144, 0.5);
+  outline: 1px solid rgb(85, 85, 85);
+  border-radius: 2px;
+}
+
+img {
+  width: 100%;
+  height: 16vh;
+  max-height: 8rem;
+  min-height: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0;
+  transition: opacity 0.4s, visibility 0.4s, box-shadow 0.4s, border 0.4s;
+  cursor: pointer;
+}
+
+.game-header {
+  display: flex;
+  justify-content: center;
+  width: 38rem;
+  margin: 0 0 0.5rem 0;
+  color: black;
+  text-shadow: 0 1px 2px white, 0 0 12px darkgreen, 0 0 8px lightgreen;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.game-header2 {
+  margin: 0;
+  color: white;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px black, 0 0 2px darkgreen, 0 0 1px lightgreen;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0.5rem 0;
+  width: 38rem;
+  color: black;
+  text-shadow: 0 1px 2px white, 0 0 12px blue, 0 0 8px lightblue;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.movie-header2 {
+  margin: 0;
+  color: white;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px black, 0 0 2px blue, 0 0 1px lightblue;
+}
+
+h4 {
+  text-align: center;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s, visibility 0.4s;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.top-items {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    rgb(85, 85, 85) 50%,
+    rgb(50, 50, 50) 100%
+  );
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 84vh;
+  max-height: 36rem;
+  min-height: 450px;
+  z-index: 1;
+}
+
+.top-item {
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 2px 1px black;
+  color: white;
+  margin: 0.75rem;
+  width: 28.5%;
+  max-width: 11.5rem;
+  z-index: 1;
+}
+
+.top-item:hover h4 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.top-item:hover img {
+  opacity: 0.6;
+  border: 1px solid white;
+  box-shadow: 0 8px 1rem 8px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  max-height: 4vh;
+  margin-left: 2rem;
+  color: rgba(255, 255, 255, 0.75);
+  z-index: 0;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: white;
+}
+
+#emoji-header {
+  font-size: 1.8rem;
+}
+
+#emoji-button {
+  font-size: 2rem;
+  transition: text-shadow 0.3s;
+}

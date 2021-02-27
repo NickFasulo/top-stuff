@@ -1,0 +1,9 @@
+{
+  "short_name": "Top Stuff",
+  "name": "Top Stuff",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
