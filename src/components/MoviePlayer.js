@@ -11,7 +11,7 @@ class MoviePlayer extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.id !== prevProps.id) {
       fetch(
-        `http://api.themoviedb.org/3/movie/${this.props.id}/videos?api_key=${process.env.REACT_APP_API_KEY}`
+        `http://api.themoviedb.org/3/movie/${this.props.id}/videos?api_key=${REACT_APP_API_KEY}`
       )
         .then(res => res.json())
         .then(res => {
